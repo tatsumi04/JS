@@ -12,4 +12,16 @@ window.addEventListener('load' , function(){
     pullDownButton.addEventListener("click" , function(){
         console.log("クリック");
     })
+
+    pullDownButton.addEventListener("mouseover" , function(){
+        pullDownButton.setAttribute("style" , "background-color:blue;")
+    })
+
+    pullDownButton.addEventListener("mouseout" , function(){
+        pullDownButton.setAttribute("style" , "background-color:#FF6666;")
+    })
+
+    pullDownButton.addEventListener("click" , function(){
+        pullDownButton.setAttribute("style" , "background-color:green;")
+    })
 })
