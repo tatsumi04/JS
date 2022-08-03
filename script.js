@@ -1,6 +1,12 @@
+function pullDown(){
+
+}
+
 window.addEventListener('load' , function(){
     const pullDownButton = document.getElementById("lists");
     const pullDownParents = document.getElementById("pull-down");
+    const pullDownChild = document.querySelectorAll(".pull-down-list");
+    const currentList = document.getElementById("current-list");
 
     pullDownButton.addEventListener("mouseover" , function(){
         console.log("乗る");
@@ -35,4 +41,19 @@ window.addEventListener('load' , function(){
             console.log("表示");
         }
     })
+
+    pullDownChild.forEach(function(list){
+        list.addEventListener("click" , function(){
+            console.log(list);
+        })
+    })
+
+    pullDownChild.forEach(function(list){
+        list.addEventListener("click" , function(){
+            const value = list.innerHTML;
+            currentList.innerHTML = value;
+        })
+    })
 })
+
+window.addEventListener("load" , pullDown);
